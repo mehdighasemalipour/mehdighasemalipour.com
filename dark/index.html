@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js"
+        integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body class="overflow-x-hidden">
+    <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <button type="button"
+                class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-translate" viewBox="0 0 16 16">
+                    <path
+                        d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z" />
+                    <path
+                        d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z" />
+                </svg>
+            </button>
+            <div class="flex md:order-2">
+                <button type="button"
+                    class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
+                        class="w-5 h-5">
+                        <path fill-rule="evenodd"
+                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                            clip-rule="evenodd"></path>
+                    </svg></button>
+
+                <button data-collapse-toggle="navbar-sticky" type="button"
+                    class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-sticky" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                <ul
+                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="content">
+        <section class="flex justify-center items-center h-screen">
+
+            <div id="main" class="relative" style="z-index: -999;">
+                <div>
+                    <div class="relative bg-cover bg-center bg-no-repeat py-8"
+                        style="background-image: url(/assets/img/bg-hero.jpg)">
+
+                        <div class="container relative z-30 pt-20 pb-12 sm:pt-56 sm:pb-48 lg:pt-64 lg:pb-48">
+                            <div class="flex flex-col items-center justify-center lg:flex-row">
+
+                                <div class="rounded-full border-8 border-primary shadow-xl border-[#007990]">
+                                    <img src="https://mehdighasemalipour.com/dist/image.JPG"
+                                        class="h-48 rounded-full sm:h-56" alt="author" />
+                                </div>
+                                <div class="pt-8 sm:pt-10 lg:pl-8 lg:pt-0">
+
+                                    <h1
+                                        class="text-center font-header text-4xl text-[#007990] sm:text-left sm:text-5xl md:text-6xl">
+                                        Mehdi Ghasemalipour
+                                    </h1>
+                                    <p class="text-center text-[#007990] text-2xl font-semibold pt-3">
+                                        Inventor & Researcher
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-center mb-24">
+                            <img src="./img/Logo/logo.png" alt="logo" width="240" height="48">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="flex flex-col w-2/3 mx-auto mb-24 tracking-wide h-screen">
+            <h1 class="my-3 text-center sm:text-5xl md:text-6xl pb-4">10+ years of experience in the field of research
+                activities</h1>
+            <p class="my-3 text-lg ">I’m Mehdi Ghasemalipour. Over the past half-decade, I shared my innovation
+                knowledge with
+                more than 200 learners and advised more than 500, and teach them a variety of subjects focused on
+                innovation and invention. I've helped individuals to think about the bigger picture and implement
+                strategy into their everyday work, but also showed them how to bring people together and unite them for
+                a single goal. In addition, I have always sought to acquire various skills in many technical fields.
+            </p>
+            <div class="bg-white">
+                <div class="space-y-4 container xl:max-w-7xl mx-auto px-4 py-16 lg:px-8 lg:py-32">
+
+                    <!-- Team -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-16 text-center">
+                        <div>
+                            <span class="inline-block rounded-full bg-white shadow-lg p-2 mb-5">
+                                <img src="./img/Logo/noavari.academy.png" alt="User Avatar"
+                                    class="inline-block w-32 h-32 rounded-full">
+                            </span>
+                        </div>
+                        <div>
+                            <span class="inline-block rounded-full bg-white shadow-lg p-2 mb-5">
+                                <img src="./img/Logo/https___www.ifia.com_ir2020mar022mcxg.png" alt="User Avatar"
+                                    class="inline-block w-32 h-32 rounded-full">
+                            </span>
+                        </div>
+                        <div>
+                            <span class="inline-block rounded-full bg-white shadow-lg p-2 mb-5">
+                                <img src="./img/Logo/rithub.org.png" alt="User Avatar"
+                                    class="inline-block w-32 h-32 rounded-full">
+                            </span>
+                        </div>
+                    </div>
+                    <!-- END Team -->
+                </div>
+            </div>
+
+        </section>
+
+
+
+        <section class="flex flex-wrap justify-center">
+            <div class="w-full sm:w-1/2 lg:w-1/3 p-2">
+                <a href="" class="group relative block h-64 sm:h-80 lg:h-96">
+                    <span class="absolute inset-0 border-2 border-dashed border-black"></span>
+
+                    <div
+                        class="relative flex h-full transform items-end border-2 border-black bg-white transition-transform">
+                        <div
+                            class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 sm:h-12 sm:w-12" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+
+                            <h2 class="mt-4 text-xl font-medium sm:text-2xl">Creative ideation</h2>
+                        </div>
+
+                        <div
+                            class="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
+                            <h3 class="mt-4 text-xl font-medium sm:text-2xl">Creative ideation</h3>
+
+                            <p class="mt-4 text-sm sm:text-base">
+                                Either I have to find a way, or if not, I have to make it. This is how I learned to be
+                                creative.
+                            </p>
+
+                            <p class="mt-8 font-bold">Read more</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="w-full sm:w-1/2   lg:w-1/3 p-2">
+                <a href="" class="group relative block h-64 sm:h-80 lg:h-96">
+                    <span class="absolute inset-0 border-2 border-dashed border-black"></span>
+
+                    <div
+                        class="relative flex h-full transform items-end border-2 border-black bg-white transition-transform  ">
+                        <div
+                            class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 sm:h-12 sm:w-12" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+
+                            <h2 class="mt-4 text-xl font-medium sm:text-2xl">Responsibility</h2>
+                        </div>
+
+                        <div
+                            class="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
+                            <h3 class="mt-4 text-xl font-medium sm:text-2xl">Responsibility</h3>
+
+                            <p class="mt-4 text-sm sm:text-base">
+                                Any accepted responsibility must be done flawlessly with the best quality since being
+                                responsible is equal to gaining credit which is paramount to me.
+                            </p>
+
+                            <p class="mt-8 font-bold">Read more</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="w-full sm:w-1/2   lg:w-1/3 p-2">
+                <a href="" class="group relative block h-64 sm:h-80 lg:h-96">
+                    <span class="absolute inset-0 border-2 border-dashed border-black"></span>
+
+                    <div
+                        class="relative flex h-full transform items-end border-2 border-black bg-white transition-transform  ">
+                        <div
+                            class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 sm:h-12 sm:w-12" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+
+                            <h2 class="mt-4 text-xl font-medium sm:text-2xl">Knowledgeable</h2>
+                        </div>
+
+                        <div
+                            class="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
+                            <h3 class="mt-4 text-xl font-medium sm:text-2xl">Knowledgeable</h3>
+
+                            <p class="mt-4 text-sm sm:text-base">
+                                Although my age is too young for my experiences, it's the result of working for many
+                                years and staying awake many nights, which is what gives me credibility.
+                            </p>
+
+                            <p class="mt-8 font-bold">Read more</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="w-full sm:w-1/2   lg:w-1/3 p-2">
+                <a href="" class="group relative block h-64 sm:h-80 lg:h-96">
+                    <span class="absolute inset-0 border-2 border-dashed border-black"></span>
+
+                    <div
+                        class="relative flex h-full transform items-end border-2 border-black bg-white transition-transform  ">
+                        <div
+                            class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 sm:h-12 sm:w-12" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+
+                            <h2 class="mt-4 text-xl font-medium sm:text-2xl">Strategic planning</h2>
+                        </div>
+
+                        <div
+                            class="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
+                            <h3 class="mt-4 text-xl font-medium sm:text-2xl">Strategic planning</h3>
+
+                            <p class="mt-4 text-sm sm:text-base">
+                                Nothing in this direction will come to the correct result without proper strategic
+                                planning and determining vision, mission, and goals. This result of appropriate
+                                strategic planning can lead to a great personal brand.
+                            </p>
+
+                            <p class="mt-8 font-bold">Read more</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="w-full sm:w-1/2   lg:w-1/3 p-2">
+                <a href="" class="group relative block h-64 sm:h-80 lg:h-96">
+                    <span class="absolute inset-0 border-2 border-dashed border-black"></span>
+
+                    <div
+                        class="relative flex h-full transform items-end border-2 border-black bg-white transition-transform  ">
+                        <div
+                            class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 sm:h-12 sm:w-12" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+
+                            <h2 class="mt-4 text-xl font-medium sm:text-2xl">Leadership</h2>
+                        </div>
+
+                        <div
+                            class="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
+                            <h3 class="mt-4 text-xl font-medium sm:text-2xl">Leadership</h3>
+
+                            <p class="mt-4 text-sm sm:text-base">
+                                An inventor can become a leader by using their problem-solving skills, creativity, and
+                                insight to inspire and guide others toward a common goal. I always strive to be able to
+                                lead ideas with the highest quality.
+                            </p>
+
+                            <p class="mt-8 font-bold">Read more</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="w-full sm:w-1/2   lg:w-1/3 p-2">
+                <a href="" class="group relative block h-64 sm:h-80 lg:h-96">
+                    <span class="absolute inset-0 border-2 border-dashed border-black"></span>
+
+                    <div
+                        class="relative flex h-full transform items-end border-2 border-black bg-white transition-transform  ">
+                        <div
+                            class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 sm:h-12 sm:w-12" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+
+                            <h2 class="mt-4 text-xl font-medium sm:text-2xl"> Self-learning</h2>
+                        </div>
+
+                        <div
+                            class="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
+                            <h3 class="mt-4 text-xl font-medium sm:text-2xl"> Self-learning</h3>
+
+                            <p class="mt-4 text-sm sm:text-base">
+                                Self-learning is the ability to acquire knowledge and skills through independent study
+                                and discovery. This allowed me to take control of my learning and personalize my
+                                learning so that I could always learn whatever I wanted.
+                            </p>
+
+                            <p class="mt-8 font-bold">Read more</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+
+
+        <section class="flex w-screen pt-56">
+            <aside class="mb-40 p-12 bg-slate-50 rounded-xl sm:p-16 md:p-20 lg:p-24 m-auto shadow-xl">
+                <div class="max-w-xl mx-auto text-center">
+
+                    <p class="mt-2 text-3xl font-bold text-[#007990] sm:text-4xl">
+                        Contact Me
+                    </p>
+
+                    <div class="mt-8 sm:flex">
+                        <a type="submit"
+                            class="items-center justify-between w-1/3 px-5 py-3 mt-4 font-medium text-white bg-[#007990] rounded-lg sm:w-auto sm:mt-0 sm:ml-4 hover:bg-green-700">
+                            Email Me
+
+                        </a>
+
+                        <a type="submit"
+                            class=" items-center justify-between w-1/3 px-5 py-3 mt-4 font-medium text-white bg-[#007990] rounded-lg sm:w-auto sm:mt-0 sm:ml-4 hover:bg-[#2a9d8f]">
+                            Call Me
+                        </a>
+                        <a type="submit"
+                            class="items-center justify-between w-1/3 px-5 py-3 mt-4 font-medium text-white bg-[#007990] rounded-lg sm:w-auto sm:mt-0 sm:ml-4 hover:bg-green-500">
+                            Telegram
+
+                        </a>
+                    </div>
+                    <ul class="mt-12 flex justify-center gap-6 md:gap-8">
+                        <li>
+                            <a href="https://www.facebook.com/ghasemalipour.mehdi" rel="noreferrer" target="_blank"
+                                class="text-gray-700 transition hover:text-gray-700/75">
+                                <span class="sr-only">Facebook</span>
+                                <i class="fa-brands fa-facebook" style="font-size: 24px;"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.instagram.com/mehdi.ghasemalipour" rel="noreferrer" target="_blank"
+                                class="text-gray-700 transition hover:text-gray-700/75">
+                                <i class="fa-brands fa-instagram" style="font-size: 24px;"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://twitter.com/MGhasemalipour" rel="noreferrer" target="_blank"
+                                class="text-gray-700 transition hover:text-gray-700/75">
+                                <i class="fa-brands fa-twitter" style="font-size: 24px;"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.linkedin.com/in/mehdi-ghasemalipour/" rel="noreferrer" target="_blank"
+                                class="text-gray-700 transition hover:text-gray-700/75">
+                                <i class="fa-brands fa-linkedin" style="font-size: 24px;"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </section>
+
+    </main>
+
+    <footer aria-label="Site Footer" class="bg-gray-100">
+        <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
+            <div class="flex justify-center">
+                <img src="./img/Logo/logo.png" alt="logo" width="118" height="24">
+            </div>
+
+            <p class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
+                consequuntur amet culpa cum itaque neque.
+            </p>
+
+            <nav aria-label="Footer Nav" class="mt-12">
+                <ul class="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
+                    <li>
+                        <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
+                            Careers
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
+                            History
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
+                            Projects
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
+                            Blog
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <ul class="mt-12 flex justify-center gap-6 md:gap-8">
+                <li>
+                    <a href="https://www.facebook.com/ghasemalipour.mehdi" rel="noreferrer" target="_blank"
+                        class="text-gray-700 transition hover:text-gray-700/75">
+                        <span class="sr-only">Facebook</span>
+                        <i class="fa-brands fa-facebook" style="font-size: 24px;"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.instagram.com/mehdi.ghasemalipour" rel="noreferrer" target="_blank"
+                        class="text-gray-700 transition hover:text-gray-700/75">
+                        <i class="fa-brands fa-instagram" style="font-size: 24px;"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://twitter.com/MGhasemalipour" rel="noreferrer" target="_blank"
+                        class="text-gray-700 transition hover:text-gray-700/75">
+                        <i class="fa-brands fa-twitter" style="font-size: 24px;"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.linkedin.com/in/mehdi-ghasemalipour/" rel="noreferrer" target="_blank"
+                        class="text-gray-700 transition hover:text-gray-700/75">
+                        <i class="fa-brands fa-linkedin" style="font-size: 24px;"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+
+</body>
+
+</html>
